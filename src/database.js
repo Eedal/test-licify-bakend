@@ -1,9 +1,15 @@
-const mongoose = require("mongoose");
+import { connect } from "mongoose";
+import { MONGODB_URI } from "./config";
 
-mongoose
-  .connect("mongodb://mongo/testlicifydb", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then((db) => console.log("DB is connected ", db.connection.host))
-  .catch((err) => console.error(err));
+(async () => {
+  try {
+    const db = await connect(MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    console.log("DB is connected ", db.connection.name);
+  } catch (error) {
+    console.error(error);
+  }
+})();
