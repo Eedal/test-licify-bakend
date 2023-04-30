@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { ErrorCode } from "../error-handler/error-code";
-import { ErrorException } from "../error-handler/error-exception";
+import { ErrorCode } from "../../error-handler/error-code";
+import { ErrorException } from "../../error-handler/error-exception";
 import { verifyToken } from "./jwt";
 
 export const authMiddleware = (

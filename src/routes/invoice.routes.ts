@@ -6,8 +6,8 @@ import {
   createInvoice,
   updateInvoice,
   deleteInvoice,
-} from "../controllers/invoice.controller";
-import { authMiddleware } from "../auth/auth.middleware";
+} from "../modules/invoices/invoice.controller";
+import { authMiddleware } from "../modules/auth/auth.middleware";
 
 const protectedRoutes = (router: express.Router) => {
   router.use(authMiddleware);

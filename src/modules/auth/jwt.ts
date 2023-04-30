@@ -1,7 +1,8 @@
-import { UserI } from "../models/User";
 import jwt from "jsonwebtoken";
-import { ErrorException } from "../error-handler/error-exception";
-import { ErrorCode } from "../error-handler/error-code";
+
+import { UserI } from "../../models/User";
+import { ErrorException } from "../../error-handler/error-exception";
+import { ErrorCode } from "../../error-handler/error-code";
 
 const jwtKey = "keyyyy";
 

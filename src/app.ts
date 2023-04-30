@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(errorHandler);
 
-app.use("/api", invoiceRoutes);
-app.use("/api", userRoutes);
 app.use("/api", authRoutes);
+app.use("/api", userRoutes);
+app.use("/api", invoiceRoutes);
 
 expressListRoutes(app);
 
