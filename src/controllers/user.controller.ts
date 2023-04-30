@@ -20,7 +20,6 @@ export const signUp = async (
 
   const hash = passwordHash(password);
   const newUser: UserI = {
-    _id: ulid(),
     email,
     name,
     password: hash,
