@@ -14,6 +14,10 @@ const invoiceSchema = new Schema(
       type: [itemSchema],
       required: true,
     },
+    paid: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

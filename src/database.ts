@@ -3,10 +3,7 @@ import { MONGODB_URI } from "./config";
 
 (async () => {
   try {
-    const db = await connect(MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const db = await connect(MONGODB_URI);
 
     console.log("DB is connected ", db.connection.name);
   } catch (error) {
