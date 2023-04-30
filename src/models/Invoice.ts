@@ -1,7 +1,15 @@
-import { Schema, model } from "mongoose";
-import itemSchema from "./Item";
+import { Model, Schema, model } from "mongoose";
+import itemSchema, { ItemI } from "./Item";
 
-const invoiceSchema = new Schema(
+export interface InvoiceI {
+  nit: string;
+  total: number;
+  totalIva: number;
+  items: ItemI[];
+  paid: boolean;
+}
+
+const invoiceSchema = new Schema<InvoiceI>(
   {
     nit: {
       type: String,
@@ -25,4 +33,4 @@ const invoiceSchema = new Schema(
   }
 );
 
-export default model("Invoice", invoiceSchema);
+export const InvoiceModel: Model<InvoiceI> = model("Invoice", invoiceSchema);

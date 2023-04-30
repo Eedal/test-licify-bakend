@@ -1,6 +1,12 @@
 import { Schema } from "mongoose";
 
-const itemSchema = new Schema({
+export interface ItemI {
+  name: string;
+  value: number;
+  iva: number;
+}
+
+const itemSchema = new Schema<ItemI>({
   name: {
     type: String,
     required: true,
