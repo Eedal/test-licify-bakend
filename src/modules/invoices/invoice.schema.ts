@@ -1,5 +1,5 @@
 import { Model, Schema, model } from "mongoose";
-import itemSchema, { ItemI } from "../item/Item";
+import itemSchema, { ItemI } from "../../models/item/Item";
 
 export interface InvoiceI {
   nit: string;
